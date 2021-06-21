@@ -160,6 +160,17 @@ main {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.error-container__notfound {
+    width: 60%;
+    justify-content: center;
+    text-align: center;
+    margin: 200px auto;
+    padding: 30px;
+    background-color: rgb(231, 5, 5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
 .rest-item__skeleton {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 15px auto;

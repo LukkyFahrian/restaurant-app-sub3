@@ -8,9 +8,10 @@
     padding: 1em;
     text-align: center;
     background-image: url('./images/heros/hero-image_4-large.jpg');
+    background-blend-mode:hard-light;
     background-position: center;
     background-size: cover;
-    background-color: green;
+    background-color: rgb(97, 97, 97);
 }
 
 .hero__inner {

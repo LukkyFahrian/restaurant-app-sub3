@@ -10,6 +10,7 @@ import './components/app-bar';
 import './components/skip-link';
 import './components/hero-element';
 import './components/copyright-footer';
+import './components/404';
 
 class App {
   constructor({
@@ -35,9 +36,14 @@ class App {
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
-    this._content.innerHTML = await page.render();
-    await page.afterRender();
-    await loaderWait();
+    try { 
+      this._content.innerHTML = await page.render(); 
+      await page.afterRender(); 
+      await loaderWait();
+    } catch (error) {
+      this._content.innerHTML = '<not-found></not-found>'
+      console.error(error);
+    }
   }
 }
 
